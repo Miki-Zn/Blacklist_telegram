@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment configs
+.env
+telegram-bot/config.php
+api/.env
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
