@@ -70,20 +70,20 @@ async def process_single_message(client: Client, message: PyrogramMessage, task_
 
             final_path_to_send = watermarked_path or path_to_process
             media_paths_for_socials.append(final_path_to_send)
-            await send_with_retry(client.send_photo, task_config['target_channel'], photo=final_path_to_send, caption=processed_text, task_name=task_name)
+            await send_with_retry(client, "photo", task_config['target_channel'], processed_text, final_path_to_send, task_name=task_name)
 
         elif message.video:
             media_path = await message.download(in_memory=False, file_name=str(TEMP_DIR / f"{uuid.uuid4()}.mp4"))
             all_temp_files.append(media_path)
             media_paths_for_socials.append(media_path)
-            await send_with_retry(client.send_video, task_config['target_channel'], video=media_path, caption=processed_text, task_name=task_name)
+            await send_with_retry(client, "video", task_config['target_channel'], processed_text, media_path, task_name=task_name)
         elif message.animation:
             media_path = await message.download(in_memory=False, file_name=str(TEMP_DIR / f"{uuid.uuid4()}.mp4"))
             all_temp_files.append(media_path)
             media_paths_for_socials.append(media_path)
-            await send_with_retry(client.send_animation, task_config['target_channel'], animation=media_path, caption=processed_text, task_name=task_name)
+            await send_with_retry(client, "animation", task_config['target_channel'], processed_text, media_path, task_name=task_name)
         elif processed_text:
-            await send_with_retry(client.send_message, task_config['target_channel'], processed_text, task_name=task_name)
+            await send_with_retry(client, "", task_config['target_channel'], processed_text, None, task_name=task_name)
 
         if media_paths_for_socials:
              await post_to_instagram(task_name, task_config, processed_text, media_paths_for_socials)
