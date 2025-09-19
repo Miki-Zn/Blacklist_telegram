@@ -1,74 +1,83 @@
 Telegram Multichannel Content Automation Bot
+
 This project is a production-grade asynchronous Telegram bot for automating the management, generation, forwarding, and advertising of posts across multiple channels and social media platforms. The bot supports advanced scheduling, content transformation (including watermarking and translation), and seamless integration with Instagram Threads and X (Twitter).
+
 
 Features
 
-Multi-channel Telegram content forwarding and automation
+- Multi-channel Telegram content forwarding and automation
 
-Scheduled and recurring mass mailings with media support
+- Scheduled and recurring mass mailings with media support
 
-AI-powered content generation for text and images (OpenAI, Gemini, Claude, Llama, etc.)
+- AI-powered content generation for text and images (OpenAI, Gemini, Claude, Llama, etc.)
 
-Watermark addition and external watermark removal options for images and tables
+- Watermark addition and external watermark removal options for images and tables
 
-Built-in translation for posts and multilingual support
+- Built-in translation for posts and multilingual support
 
-Integration for crossposting to Instagram Threads and X (Twitter)
+- Integration for crossposting to Instagram Threads and X (Twitter)
 
-Advanced statistics and scheduled reporting for posts, views, reactions, and subscribers
+- Advanced statistics and scheduled reporting for posts, views, reactions, and subscribers
 
-Flexible proxy support and admin interface
+- Flexible proxy support and admin interface
+
 
 Installation
 
-Clone this repository:
 
-text
+1. Clone this repository:
+
 git clone <repository-url>
 cd <repository-folder>
-Install Python dependencies:
 
-text
+2. Install Python dependencies:
+
 pip install -r requirements.txt
+
 Dependencies include:
 
-aiogram (Telegram Bot API)
+- aiogram (Telegram Bot API)
 
-pyrogram + tgcrypto
+- pyrogram + tgcrypto
 
-aiohttp, apscheduler
+- aiohttp, apscheduler
 
-pillow, opencv-python
+- pillow, opencv-python
 
-instagrapi, tweepy
+- instagrapi, tweepy
 
-requests, openai
+- requests, openai
+- 
 
-Configure your environment variables and tokens in .env or configuration files, as detailed in the config.py module.
+3. Configure your environment variables and tokens in .env or configuration files, as detailed in the config.py module.
 
-Run the bot:
 
-text
+4. Run the bot:
+
+
 python main.py
+
 Usage
 
-Set up your channels, bots, and (optionally) proxies in the configuration.
+- Set up your channels, bots, and (optionally) proxies in the configuration.
 
-Use the admin Telegram interface to add tasks for forwarding, content generation, or advertising (details customizable).
+- Use the admin Telegram interface to add tasks for forwarding, content generation, or advertising (details customizable).
 
-Manage scheduled mailings and content generation directly from Telegram.
+- Manage scheduled mailings and content generation directly from Telegram.
 
-Monitor and export statistics through bot commands/file outputs.
+- Monitor and export statistics through bot commands/file outputs.
+
 
 Requirements
 
-Python 3.9+
+- Python 3.9+
 
-Telegram bot token and API credentials
+- Telegram bot token and API credentials
 
-(Optional) Instagram/X credentials for social media integration
+- (Optional) Instagram/X credentials for social media integration
 
-(Optional) Proxy server access for geo-distributed use
+- (Optional) Proxy server access for geo-distributed use
+  
 
 Contributions
 
