@@ -23,6 +23,7 @@ from aiogram.types import CallbackQuery, Message
 from aiogram.exceptions import TelegramBadRequest
 from aiogram.filters import BaseFilter
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from config import OPENAI_API_KEY
 
 # --- Импорты из config.py ---
 try:
